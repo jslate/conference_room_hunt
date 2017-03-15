@@ -33,8 +33,8 @@ require 'gosu'
 WIDTH, HEIGHT = 600, 600
 
 module Tiles
-  Window = 5
-  Plant = 9
+  Window = 0
+  Plant = 1
 end
 
 class Appointment
@@ -140,7 +140,7 @@ class Map
 
   def initialize(filename)
     # Load 60x60 tiles, 5px overlap in all four directions.
-    @tileset = Gosu::Image.load_tiles("media/tileset.png", 16, 48, :tileable => true)
+    @tileset = Gosu::Image.load_tiles("media/tileset.png", 60, 60, :tileable => true)
 
     appointment_img = Gosu::Image.new("media/appointment.png")
     @appointments = []
